@@ -1,4 +1,4 @@
-using NUnit.Framework;
+п»їusing NUnit.Framework;
 using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -25,20 +25,20 @@ namespace NUnitTestProject4
             IWebElement element;
             // Google search
             element = driver.FindElement(By.XPath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
-            element.SendKeys("Кпи розклад");
+            element.SendKeys("РљРїРё СЂРѕР·РєР»Р°Рґ");
             element.SendKeys(Keys.Enter);
             element = driver.FindElement(By.ClassName("iUh30"));
             element.Click();
             //Find KP-91 Schedule
             element = driver.FindElement(By.XPath("//*[@id=\"ctl00_MainContent_ctl00_txtboxGroup\"]"));
-            element.SendKeys("Кп-91");
+            element.SendKeys("РљРї-91");
             element = driver.FindElement(By.XPath("//*[@id=\"ctl00_MainContent_ctl00_btnShowSchedule\"]"));
             element.Click();
             element = driver.FindElement(By.XPath("//*[@id=\"ctl00_MainContent_FirstScheduleTable\"]/tbody/tr[1]/td[4]"));
-            if (element.Text.Contains("Середа"))
+            if (element.Text.Contains("РЎРµСЂРµРґР°"))
             {
                 element = driver.FindElement(By.XPath("//*[@id=\"ctl00_MainContent_FirstScheduleTable\"]/tbody/tr[2]/td[4]/span/a"));
-                if (element.Text.Contains("Якість та тестування програмного забезпечення"))
+                if (element.Text.Contains("РЇРєС–СЃС‚СЊ С‚Р° С‚РµСЃС‚СѓРІР°РЅРЅСЏ РїСЂРѕРіСЂР°РјРЅРѕРіРѕ Р·Р°Р±РµР·РїРµС‡РµРЅРЅСЏ"))
                 {
                     System.Threading.Thread.Sleep(5000);
                     Console.Beep();
@@ -64,7 +64,7 @@ namespace NUnitTestProject4
             element = driver.FindElement(By.XPath("/html/body/div[2]/header/div/div[8]/div/div[2]/div[2]/a[2]"));
             element.Click();
             element = driver.FindElement(By.XPath("/html/body/main/div[2]/div/section/h3"));
-            if (element.Text.Contains("з 07:30 до 22:30"))
+            if (element.Text.Contains("Р· 07:30 РґРѕ 22:30"))
             {
                 System.Threading.Thread.Sleep(5000);
                 Console.Beep();
